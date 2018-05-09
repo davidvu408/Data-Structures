@@ -45,4 +45,8 @@ public class TestDriver {
 	private static void testBinarySearchTree() {
 		BinarySearchTree BST = new BinarySearchTree();
 	}
+	
+	private static void testLinkedList() {
+		LinkedList linkedList = new LinkedList();
+	}
 }
