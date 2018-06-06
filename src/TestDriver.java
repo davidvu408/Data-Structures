@@ -2,8 +2,9 @@
 public class TestDriver {
 
 	public static void main(String[] args) {
-		testStack();
+		//testStack();
 		//testQueue();
+		testBinarySearchTree();
 	}
 	
 	// Tests methods and functionality of Stack.java
@@ -43,7 +44,15 @@ public class TestDriver {
 	}
 
 	private static void testBinarySearchTree() {
-		BinarySearchTree BST = new BinarySearchTree();
+		BinarySearchTree<Integer> BST = new BinarySearchTree<Integer>();
+		BST.insert(new Integer(0));
+		BST.insert(new Integer(-5));
+		BST.insert(new Integer(7));
+		BST.insert(new Integer(3));
+		BST.insert(new Integer(2));
+		BST.insert(new Integer(1));
+		BST.insert(new Integer(9));
+		System.out.println(BST.contains(new Integer(3)));
 	}
 	
 	private static void testLinkedList() {
