@@ -83,12 +83,32 @@ public class LinkedList<E> {
 		}
 		// Search for the element in the Linked List
 		Node index = head;
-		while(index.next != null) {
+		while(index != null) {
 			if(index.next.data == data) {
 				index.next = index.next.next;
 				return true;
 			}
 			index = index.next;
+		}
+		return false;
+	}
+	
+	/**
+	 * Search for Node containing data from argument
+	 * @param data - Data of Node to be found
+	 * @return true - if Node with data was found. 
+	 * 		   false - if Node with data was not found.
+	 */
+	public boolean search(E data) {
+		// If Linked List is empty
+		if(isEmpty()) { return false; }
+		// IF Linked List data is at head
+		if(head.data == data) { return true; }
+		// Otherwise
+		Node index = head;
+		while(index != null) {
+			if(index.data == data) { return true; }
+			else { index = index.next; }
 		}
 		return false;
 	}
